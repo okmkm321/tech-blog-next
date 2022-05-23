@@ -1,0 +1,22 @@
+@use '@styles/var' as *;
+
+.AppEditorButton {
+    display: inline-block;
+    margin: 0 3px 6px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 1px 10px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-brown;
+        color: #fff;
+    }
+}
+
+.AppEditorButton--active {
+    background-color: $color-brown;
+    color: #fff;
+}

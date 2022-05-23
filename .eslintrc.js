@@ -26,6 +26,8 @@ module.exports = {
         'require-jsdoc': ['off'],
         'spaced-comment': ['off'],
         'max-len': ['off'],
+        'new-cap': ['off'],
+        'react/display-name': ['off'],
         '@next/next/no-page-custom-font': ['off'],
         'import/order': [
             'error',

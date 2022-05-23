@@ -26,7 +26,7 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
                     rel='stylesheet'
                 />
             </Head>
-            <header className='flex bg-beige w-screen px-5 h-16'>
+            <header className='flex bg-beige w-full px-5 h-16'>
                 <div className='relative w-36'>
                     <Image
                         src='/images/11324_color.png'
