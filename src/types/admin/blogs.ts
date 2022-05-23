@@ -7,22 +7,22 @@ export type Blog = {
     eye_catch: string;
     state: number;
     publish_at: string;
-    categories: Category[];
-    tags: Tag[];
-    contests: Content[];
+    categories: BlogCategory[];
+    tags: BlogTag[];
+    contests: BlogContent[];
 };
 
-export type Category = {
+export type BlogCategory = {
     name: string;
     slug: string;
 };
 
-export type Tag = {
+export type BlogTag = {
     name: string;
     slug: string;
 };
 
-export type Content = {
+export type BlogContent = {
     name: string;
     anchor: string;
     position: number;
