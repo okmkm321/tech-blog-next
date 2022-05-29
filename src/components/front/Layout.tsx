@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link';
+import Link from 'next/link'
 import style from '@/components/front/Layout.module.scss'
 
 type LayoutProps = Required<{
