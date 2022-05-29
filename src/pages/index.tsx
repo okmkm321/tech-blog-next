@@ -1,20 +1,20 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
-import { useState } from 'react'
-import styles from './index.module.scss'
-import Layout from '@/components/front/Layout'
-import Category from '@/components/front/top/Category'
+import type { NextPage } from 'next';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from './index.module.scss';
+import Layout from '@/components/front/Layout';
+import Category from '@/components/front/top/Category';
 
 const Index: NextPage = () => {
     const buildStyle = {
-        filter: 'drop-shadow(2px 4px 6px black)'
-    }
+        filter: 'drop-shadow(2px 4px 6px black)',
+    };
 
-    const [faceClassName, setFaceClassName] = useState<string>(`${styles.mv_face} ${styles._init}`)
+    const [faceClassName, setFaceClassName] = useState<string>(`${styles.mv_face} ${styles._init}`);
 
     setTimeout(() => {
-        setFaceClassName(styles.mv_face)
-    }, 1000)
+        setFaceClassName(styles.mv_face);
+    }, 1000);
 
     return (
         <>
@@ -29,17 +29,17 @@ const Index: NextPage = () => {
                 </div>
                 <Image
                     src='/images/front/mv/buildings.png'
-                    layout="fill"
+                    layout='fill'
                     objectFit='cover'
                     alt='tech-blog'
                     style={buildStyle}
                 ></Image>
             </div>
-            <Layout title="トップ">
+            <Layout title='トップ'>
                 <Category></Category>
             </Layout>
         </>
-    )
-}
+    );
+};
 
-export default Index
+export default Index;

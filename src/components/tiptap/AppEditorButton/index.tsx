@@ -1,5 +1,5 @@
-import React, { MouseEventHandler } from 'react'
-import styles from './style.module.scss'
+import React, { MouseEventHandler } from 'react';
+import styles from './style.module.scss';
 
 export type AppEditorButtonProps = {
     isActive?: boolean;
@@ -12,14 +12,14 @@ export const AppEditorButton: React.FC<AppEditorButtonProps> = ({
     onClick,
     children,
 }) => {
-    const className = [styles.AppEditorButton]
+    const className = [styles.AppEditorButton];
     if (isActive) {
-        className.push(styles['AppEditorButton--active'])
+        className.push(styles['AppEditorButton--active']);
     }
 
     return (
         <button onClick={onClick} className={className.join(' ')}>
             {children}
         </button>
-    )
-}
+    );
+};

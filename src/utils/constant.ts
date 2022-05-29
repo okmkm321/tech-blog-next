@@ -11,4 +11,4 @@ export const STATE_NAME: { id: number; name: string }[] = [
         id: 2,
         name: '非公開',
     },
-]
+];

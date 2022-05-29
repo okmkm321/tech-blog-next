@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type LayoutProps = Required<{
     readonly children?: React.ReactNode;
@@ -9,12 +9,12 @@ type LayoutProps = Required<{
 }>;
 
 const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
-    const router = useRouter()
-    const pathName: string = router.pathname
-    let navBlog = 'hover:bg-brown hover:text-beige px-3 py-2 rounded'
-    const navContact = 'hover:bg-brown hover:text-beige px-3 py-2 rounded'
+    const router = useRouter();
+    const pathName: string = router.pathname;
+    let navBlog = 'hover:bg-brown hover:text-beige px-3 py-2 rounded';
+    const navContact = 'hover:bg-brown hover:text-beige px-3 py-2 rounded';
     if (pathName.includes('/admin/blogs')) {
-        navBlog = 'bg-brown text-beige px-3 py-2 rounded'
+        navBlog = 'bg-brown text-beige px-3 py-2 rounded';
     }
     return (
         <div className=''>
@@ -61,7 +61,7 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
                 @tech-blog 2022
             </footer>
         </div>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
