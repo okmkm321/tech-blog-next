@@ -1,15 +1,15 @@
-import dayjs from 'dayjs';
-import Image from 'next/image';
-import Link from 'next/link';
-import Layout from '@/components/admin/Layout';
-import { getAllBlogs } from '@/lib/admin/blogs';
-import { Blog, BlogCategory, BlogTag } from '@/types/admin/blogs';
-import { getStateName } from '@/utils/utils';
-dayjs.locale('ja');
+import dayjs from 'dayjs'
+import Image from 'next/image'
+import Link from 'next/link'
+import Layout from '@/components/admin/Layout'
+import { getAllBlogs } from '@/lib/admin/blogs'
+import { Blog, BlogCategory, BlogTag } from '@/types/admin/blogs'
+import { getStateName } from '@/utils/utils'
+dayjs.locale('ja')
 
 type Props = {
-    blogs: Blog[];
-};
+    blogs: Blog[]
+}
 
 export default function AdminBlogIndex({ blogs }: Props) {
     return (
@@ -113,13 +113,13 @@ export default function AdminBlogIndex({ blogs }: Props) {
                 </table>
             </div>
         </Layout>
-    );
+    )
 }
 
 export async function getStaticProps() {
-    const blogs = await getAllBlogs();
+    const blogs = await getAllBlogs()
     return {
         props: { blogs },
         revalidate: 60 * 10,
-    };
+    }
 }

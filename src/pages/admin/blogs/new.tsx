@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import Layout from '@/components/admin/Layout';
-import Tiptap from '@/components/tiptap/Tiptap';
-import { getAllCategories } from '@/lib/admin/categories';
-import { getAllTags } from '@/lib/admin/tags';
-import { Category } from '@/types/admin/categories';
-import { Tag } from '@/types/admin/tags';
+import { useState } from 'react'
+import Layout from '@/components/admin/Layout'
+import Tiptap from '@/components/tiptap/Tiptap'
+import { getAllCategories } from '@/lib/admin/categories'
+import { getAllTags } from '@/lib/admin/tags'
+import { Category } from '@/types/admin/categories'
+import { Tag } from '@/types/admin/tags'
 
 type Props = {
-    categories: Category[];
-    tags: Tag[];
-};
+    categories: Category[]
+    tags: Tag[]
+}
 
 export default function AdminBlogNew({ categories, tags }: Props) {
-    const [selectedTags, setTags] = useState<number[]>([]);
+    const [selectedTags, setTags] = useState<number[]>([])
     const setTag = (id: number) => {
         if (selectedTags.includes(id)) {
-            const changeTags = selectedTags.filter((t: number) => t !== id);
-            setTags(changeTags);
+            const changeTags = selectedTags.filter((t: number) => t !== id)
+            setTags(changeTags)
         } else {
-            setTags([...selectedTags, id]);
+            setTags([...selectedTags, id])
         }
-    };
+    }
     return (
         <Layout title='ブログ新規作成'>
             <div className='flex mt-20 justify-start items-center mr-auto'>
@@ -205,14 +205,14 @@ export default function AdminBlogNew({ categories, tags }: Props) {
                 </div>
             </div>
         </Layout>
-    );
+    )
 }
 
 export async function getStaticProps() {
-    const tags = await getAllTags();
-    const categories = await getAllCategories();
+    const tags = await getAllTags()
+    const categories = await getAllCategories()
     return {
         props: { tags, categories },
         revalidate: 60 * 10,
-    };
+    }
 }
