@@ -1,0 +1,45 @@
+@use '../../styles/var.scss' as v;
+@use '../../styles/function.scss' as f;
+.header {
+    width: 100%;
+    overflow: hidden;
+    font-family: 'DotGothic16', sans-serif;
+    > .nav_block {
+        min-height: 10vh;
+        background-color: v.$color-beige;
+        z-index: 1;
+        > nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            > .title {
+                font-size: f.rem(50px);
+                font-weight: bold;
+                cursor: pointer;
+            }
+            > .right_nav {
+                display: flex;
+                align-items: center;
+                > .nav_items {
+                    display: flex;
+                    align-items: center;
+                    font-size: f.rem(24px);
+                    font-weight: bold;
+                    > .nav_list {
+                        margin-right: 50px;
+                        cursor: pointer;
+                        &:last-child {
+                            margin-right: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main {
+    font-family: 'DotGothic16', sans-serif;
+}

@@ -1,7 +1,8 @@
+@use './var.scss' as v;
+@use './function.scss' as f;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './var.scss';
 
 body {
   font-family: 'Kaisei Opti', serif;
@@ -9,7 +10,7 @@ body {
 
 .ProseMirror {
   margin-top: 10px;
-  border: 2px solid $color-brown;
+  border: 2px solid v.$color-brown;
   border-radius: 5px;
   padding: 10px;
   min-height: 50vh;
