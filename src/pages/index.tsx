@@ -1,11 +1,11 @@
-import Layout from '@/components/front/Layout'
 import type { NextPage } from 'next'
-import styles from './index.module.scss'
 import Image from 'next/image'
 import { useState } from 'react'
+import styles from './index.module.scss'
+import Layout from '@/components/front/Layout'
 import Category from '@/components/front/top/Category'
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
     const buildStyle = {
         filter: 'drop-shadow(2px 4px 6px black)'
     }
@@ -42,4 +42,4 @@ const index: NextPage = () => {
     )
 }
 
-export default index
+export default Index
