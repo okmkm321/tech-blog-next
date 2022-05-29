@@ -1,31 +1,31 @@
-import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
-import Document from '@tiptap/extension-document';
-import Dropcursor from '@tiptap/extension-dropcursor';
-import Image from '@tiptap/extension-image';
-import Paragraph from '@tiptap/extension-paragraph';
-import Text from '@tiptap/extension-text';
-import TextAlign from '@tiptap/extension-text-align';
+import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight'
+import Document from '@tiptap/extension-document'
+import Dropcursor from '@tiptap/extension-dropcursor'
+import Image from '@tiptap/extension-image'
+import Paragraph from '@tiptap/extension-paragraph'
+import Text from '@tiptap/extension-text'
+import TextAlign from '@tiptap/extension-text-align'
 // import TextStyle from '@tiptap/extension-text-style'
-import { useEditor, EditorContent, ReactNodeViewRenderer } from '@tiptap/react';
-import StarterKit from '@tiptap/starter-kit';
-import lowlight from 'lowlight';
-import { AppEditorButton } from './AppEditorButton';
-import styles from './AppEditorButton/style.module.scss';
-import { codeBlockComponent } from './CodeBlock/CodeBlock';
-import 'remixicon/fonts/remixicon.css';
+import { useEditor, EditorContent, ReactNodeViewRenderer } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
+import lowlight from 'lowlight'
+import { AppEditorButton } from './AppEditorButton'
+import styles from './AppEditorButton/style.module.scss'
+import { codeBlockComponent } from './CodeBlock/CodeBlock'
+import 'remixicon/fonts/remixicon.css'
 // import { Color } from '@tiptap/extension-color'
 
 const MenuBar = ({ editor }: any) => {
     if (!editor) {
-        return null;
+        return null
     }
     const addImage = () => {
-        const url = window.prompt('URL');
+        const url = window.prompt('URL')
 
         if (url) {
-            editor.chain().focus().setImage({ src: url }).run();
+            editor.chain().focus().setImage({ src: url }).run()
         }
-    };
+    }
 
     return (
         <>
@@ -145,8 +145,8 @@ const MenuBar = ({ editor }: any) => {
             </AppEditorButton>
             <EditorContent className={styles.AppEditor} editor={editor} />
         </>
-    );
-};
+    )
+}
 
 export default () => {
     const editor = useEditor({
@@ -160,19 +160,19 @@ export default () => {
             Text,
             CodeBlockLowlight.extend({
                 addNodeView() {
-                    return ReactNodeViewRenderer(codeBlockComponent);
+                    return ReactNodeViewRenderer(codeBlockComponent)
                 },
             }).configure({ lowlight }),
             Image,
             Dropcursor,
         ],
         content: ``,
-    });
+    })
 
     return (
         <div>
             <MenuBar editor={editor} />
             <EditorContent editor={editor} />
         </div>
-    );
-};
+    )
+}

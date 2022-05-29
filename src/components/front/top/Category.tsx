@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import style from '@/components/front/top/Category.module.scss';
+import Image from 'next/image'
+import Link from 'next/link'
+import style from '@/components/front/top/Category.module.scss'
 
 const Category = () => {
     const categories = [
@@ -34,7 +34,7 @@ const Category = () => {
             robot: '/images/front/top/category/robo_beige.png',
             gear: '/images/front/top/category/gear_beige.png',
         },
-    ];
+    ]
 
     return (
         <section className={style.category}>
@@ -52,7 +52,7 @@ const Category = () => {
                 ))}
             </ul>
         </section>
-    );
-};
+    )
+}
 
-export default Category;
+export default Category

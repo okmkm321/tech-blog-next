@@ -1,6 +1,6 @@
-import { NodeViewWrapper, NodeViewContent } from '@tiptap/react';
-import React from 'react';
-import styles from './CodeBlock.module.scss';
+import { NodeViewWrapper, NodeViewContent } from '@tiptap/react'
+import React from 'react'
+import styles from './CodeBlock.module.scss'
 
 export const codeBlockComponent =
     () =>
@@ -32,4 +32,4 @@ export const codeBlockComponent =
                     <NodeViewContent as='code' />
                 </pre>
             </NodeViewWrapper>
-        );
+        )

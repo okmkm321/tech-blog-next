@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import style from '@/components/front/Layout.module.scss';
+import Head from 'next/head'
+import Link from 'next/link'
+import style from '@/components/front/Layout.module.scss'
 
 type LayoutProps = Required<{
-    readonly children?: React.ReactNode;
-    readonly title?: string;
-}>;
+    readonly children?: React.ReactNode
+    readonly title?: string
+}>
 
 const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
     const navigation = [
@@ -17,7 +17,7 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
             name: 'CONTACT',
             path: '/contact',
         },
-    ];
+    ]
 
     return (
         <>
@@ -52,7 +52,7 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
             </header>
             <main className={style.main}>{children}</main>
         </>
-    );
-};
+    )
+}
 
-export default Layout;
+export default Layout

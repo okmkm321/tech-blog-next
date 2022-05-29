@@ -51,7 +51,7 @@
     "prettier": {
         "trailingComma": "all",
         "tabWidth": 4,
-        "semi": true,
+        "semi": false,
         "singleQuote": true,
         "jsxSingleQuote": true,
         "printWidth": 100
