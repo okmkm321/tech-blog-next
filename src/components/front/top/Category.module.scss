@@ -1,0 +1,23 @@
+.category {
+    max-width: 1200px;
+    margin: 100px auto;
+    > .c_items {
+        display: flex;
+        justify-content: space-between;
+        > .c_list {
+            width: 18%;
+            position: relative;
+            cursor: pointer;
+            > .name_block {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                > .text {
+                    color: blue;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
