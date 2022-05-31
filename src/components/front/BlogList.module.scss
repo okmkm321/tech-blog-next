@@ -1,0 +1,68 @@
+@use '../../styles/var.scss' as v;
+@use '../../styles/function.scss' as f;
+.blog_list_sec {
+    display: flex;
+    justify-content: space-between;
+    > .blog_items {
+        max-width: 800px;;
+        > .blog_list {
+            &:not(:first-child) {
+                margin-top: 70px;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: all 0.6s;
+                padding: 5px;
+                border-radius: 5px;
+                &:hover {
+                    transform: translateY(-3px);
+                    opacity: 0.6;
+                    box-shadow: 0px 0 10px 0px gray;
+                }
+                > .img_container {
+                    width: 37.5%;
+                    border: 1px solid #4d4d4d;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    > img {
+                        object-fit: cover;
+                    }
+                }
+                > .txt_block {
+                    width: 55%;
+                    margin: 10px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    > time {
+                        color: #4d4d4d;
+                        font-size: f.rem(12px);
+                    }
+                    > .blog_title {
+                        font-size: f.rem(20px);
+                        line-height: 1.5;
+                        margin-top: -25px;
+                    }
+                    > .tag_items {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        justify-self: flex-end;
+                        > .tag_list {
+                            background-color: v.$color-brown;
+                            color: white;
+                            font-size: f.rem(13px);
+                            padding: 2px 5px;
+                            &:not(:first-child) {
+                                margin-left: 25px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -5,10 +5,10 @@
     overflow: hidden;
     font-family: 'DotGothic16', sans-serif;
     > .nav_block {
-        min-height: 10vh;
         background-color: v.$color-beige;
         z-index: 1;
         > nav {
+            min-height: 10vh;
             max-width: 1200px;
             margin: 0 auto;
             color: white;
@@ -42,4 +42,122 @@
 }
 .main {
     font-family: 'DotGothic16', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    margin-top: 550px;
+    background-color: v.$color-beige;
+    padding: 200px;
+    position: relative;
+    > .robo1_block {
+        &:hover {
+            > .parts {
+                &.bg {
+                    width: 300px;
+                    height: 500px;
+                }
+                &.face {
+                    transform: translate(0, -100%);
+                    top: -265px;
+                    right: 195px;
+                    filter: none;
+                }
+                &.body {
+                    transform: translate(0, -100%);
+                    top: -150px;
+                    right: 195px;
+                    filter: none;
+                }
+                &.right_arm {
+                    transform: translate(0, -100%);
+                    top: -100px;
+                    right: 300px;
+                    filter: none;
+                }
+                &.left_arm {
+                    transform: translate(0, -100%);
+                    top: -100px;
+                    right: 157px;
+                    filter: none;
+                }
+                &.hip {
+                    transform: translate(0, -100%);
+                    top: -115px;
+                    right: 195px;
+                    filter: none;
+                }
+                &.right_reg {
+                    transform: translate(0, -100%);
+                    right: 207px;
+                    filter: none;
+                    }
+                &.left_reg {
+                    transform: translate(0, -100%);
+                    right: 250px;
+                    filter: none;
+                    }
+            }
+        }
+        > .parts {
+            position: absolute;
+            top: 0;
+            transform: translate(0, -100%);
+            &.bg {
+                width: 320px;
+                height: 400px;
+                right: 60px;
+            }
+            &.face {
+                right: 90px;
+                width: 104px;
+                transform: translate(0, -100%) rotate(73deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+                }
+            &.body {
+                right: 160px;
+                width: 104px;
+                transform: translate(0, -100%) rotate(180deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+                }
+            &.right_arm {
+                right: 130px;
+                width: 37px;
+                transform: translate(0, -100%) rotate(-20deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+                }
+            &.left_arm {
+                right: 90px;
+                width: 37px;
+                transform: translate(0, -100%) rotate(147deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+                }
+            &.hip {
+                right: 180px;
+                width: 104px;
+                transform: translate(0, -100%) rotate(-60deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+                }
+            &.right_reg {
+                right: 300px;
+                width: 36px;
+                transform: translate(0, -100%) rotate(60deg);
+                transition: all 1s;
+                filter: drop-shadow(2px 4px 6px gray);
+            }
+            &.left_reg {
+                right: 200px;
+                width: 36px;
+                transform: translate(0, -100%) rotate(-60deg);
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 1s;
+            }
+        }
+    }
 }

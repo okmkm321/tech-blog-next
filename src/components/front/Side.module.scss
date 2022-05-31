@@ -1,0 +1,27 @@
+@use '../../styles/var.scss' as v;
+@use '../../styles/function.scss' as f;
+.side_nav {
+    max-width: 366px;
+    width: 30.5%;
+    > .nav_title {
+        background-color: v.$color-beige;
+        font-size: f.rem(20px);
+        text-align: center;
+        padding: 5px 0;
+    }
+    > .nav_items {
+        margin: 10px 0;
+        > .nav_list {
+            > a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 5px 0;
+                > .img_container {
+                    width: 12%;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
