@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from './index.module.scss'
+import BlogList from '@/components/front/BlogList'
 import Layout from '@/components/front/Layout'
 import Category from '@/components/front/top/Category'
 
@@ -37,6 +38,7 @@ const Index: NextPage = () => {
             </div>
             <Layout title='トップ'>
                 <Category></Category>
+                <BlogList></BlogList>
             </Layout>
         </>
     )

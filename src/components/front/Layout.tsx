@@ -51,6 +51,34 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
                 </div>
             </header>
             <main className={style.main}>{children}</main>
+            <footer className={style.footer}>
+                <div className={style.robo1_block}>
+                    <div className={`${style.body} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_body.png" alt="" />
+                    </div>
+                    <div className={`${style.right_arm} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_right_arm.png" alt="" />
+                    </div>
+                    <div className={`${style.left_arm} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_left_arm.png" alt="" />
+                    </div>
+                    <div className={`${style.hip} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_hip.png" alt="" />
+                    </div>
+                    <div className={`${style.right_reg} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_right_reg.png" alt="" />
+                    </div>
+                    <div className={`${style.left_reg} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_left_reg.png" alt="" />
+                    </div>
+                    <div className={`${style.face} ${style.parts}`}>
+                        <img src="/images/front/robot/robo1/robo1_face.png" alt="" />
+                    </div>
+                    <div className={`${style.bg} ${style.parts}`}>
+                        
+                    </div>
+                </div>
+            </footer>
         </>
     )
 }
