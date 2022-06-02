@@ -172,7 +172,7 @@ const Layout = ({ children, title = 'tech-blog' }: LayoutProps) => {
                             <h3 className={style.title}>Category</h3>
                             <ul className={style.category_items}>
                                 {categories && categories.map((c) => 
-                                <li className={style.category_list}>
+                                <li className={style.category_list} key={c.name}>
                                     <Link href={c.path}>
                                         <a>
                                             <h4 className={`${style.name}`}>{c.name}</h4>
